@@ -4,7 +4,8 @@ def key_for_min_value(hash)
 
 it "does not call the `#sort_by` method" do
   hash = {:blake => 500, :ashley => 2, :adam => 1}
-end  expect(hash).to_not receive(:sort_by)
+end
+ expect(hash).to_not receive(:sort_by)
 
   key_for_min_value(hash)
 end
